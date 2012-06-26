@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D82906413B0B7AF0018FBBC /* trackball.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DD572F308E7C05600443698 /* trackball.h */; };
+		7D82906513B0B7AF0018FBBC /* scene.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DD572F808E7C06800443698 /* scene.h */; };
+		7D82906813B0B7AF0018FBBC /* trackball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD572F208E7C05600443698 /* trackball.cpp */; };
+		7D82906913B0B7AF0018FBBC /* scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DD572F708E7C06800443698 /* scene.cpp */; };
+		7D82906A13B0B7AF0018FBBC /* main3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6E42400FD6BC54000344D4 /* main3.cpp */; };
+		7D82906C13B0B7AF0018FBBC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD5725608E7C03400443698 /* GLUT.framework */; };
+		7D82906D13B0B7AF0018FBBC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD5726B08E7C03C00443698 /* OpenGL.framework */; };
+		7D82906E13B0B7AF0018FBBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DD5727E08E7C04300443698 /* Foundation.framework */; };
+		7D8290A813B0C2540018FBBC /* saveimage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D8290A713B0C2540018FBBC /* saveimage.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7D6E42400FD6BC54000344D4 /* main3.cpp */ = {isa = PBXFileReference; fileEncoding = 2147483649; lastKnownFileType = sourcecode.cpp.cpp; path = main3.cpp; sourceTree = "<group>"; };
+		7D82907413B0B7AF0018FBBC /* Info-texture23_____________.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-texture23_____________.plist"; sourceTree = "<group>"; };
+		7D82907513B0B7B00018FBBC /* texture23.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = texture23.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D8290A713B0C2540018FBBC /* saveimage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = saveimage.cpp; sourceTree = "<group>"; };
+		7DD5725608E7C03400443698 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		7DD5726B08E7C03C00443698 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		7DD5727E08E7C04300443698 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7DD572F208E7C05600443698 /* trackball.cpp */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.cpp.cpp; path = trackball.cpp; sourceTree = "<group>"; };
+		7DD572F308E7C05600443698 /* trackball.h */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.h; path = trackball.h; sourceTree = "<group>"; };
+		7DD572F708E7C06800443698 /* scene.cpp */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cpp; sourceTree = "<group>"; };
+		7DD572F808E7C06800443698 /* scene.h */ = {isa = PBXFileReference; fileEncoding = 0; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D82906B13B0B7AF0018FBBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D82906C13B0B7AF0018FBBC /* GLUT.framework in Frameworks */,
+				7D82906D13B0B7AF0018FBBC /* OpenGL.framework in Frameworks */,
+				7D82906E13B0B7AF0018FBBC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DD5724408E7C00E00443698 = {
+			isa = PBXGroup;
+			children = (
+				7DD5725608E7C03400443698 /* GLUT.framework */,
+				7DD5726B08E7C03C00443698 /* OpenGL.framework */,
+				7DD5727E08E7C04300443698 /* Foundation.framework */,
+				7D6E42400FD6BC54000344D4 /* main3.cpp */,
+				7DD572F808E7C06800443698 /* scene.h */,
+				7DD572F708E7C06800443698 /* scene.cpp */,
+				7DD572F308E7C05600443698 /* trackball.h */,
+				7DD572F208E7C05600443698 /* trackball.cpp */,
+				7D8290A713B0C2540018FBBC /* saveimage.cpp */,
+				7DD5725408E7C02400443698 /* Products */,
+				7D82907413B0B7AF0018FBBC /* Info-texture23_____________.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		7DD5725408E7C02400443698 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D82907513B0B7B00018FBBC /* texture23.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7D82906313B0B7AF0018FBBC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D82906413B0B7AF0018FBBC /* trackball.h in Headers */,
+				7D82906513B0B7AF0018FBBC /* scene.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7D82906213B0B7AF0018FBBC /* texture23 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D82907013B0B7AF0018FBBC /* Build configuration list for PBXNativeTarget "texture23" */;
+			buildPhases = (
+				7D82906313B0B7AF0018FBBC /* Headers */,
+				7D82906613B0B7AF0018FBBC /* Resources */,
+				7D82906713B0B7AF0018FBBC /* Sources */,
+				7D82906B13B0B7AF0018FBBC /* Frameworks */,
+				7D82906F13B0B7AF0018FBBC /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = texture23;
+			productInstallPath = "$(USER_APPS_DIR)";
+			productName = texture23;
+			productReference = 7D82907513B0B7B00018FBBC /* texture23.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DD5724808E7C00E00443698 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7D6E42290FD6BC01000344D4 /* Build configuration list for PBXProject "texture23" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 7DD5724408E7C00E00443698;
+			productRefGroup = 7DD5725408E7C02400443698 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D82906213B0B7AF0018FBBC /* texture23 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D82906613B0B7AF0018FBBC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		7D82906F13B0B7AF0018FBBC /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D82906713B0B7AF0018FBBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D82906813B0B7AF0018FBBC /* trackball.cpp in Sources */,
+				7D82906913B0B7AF0018FBBC /* scene.cpp in Sources */,
+				7D82906A13B0B7AF0018FBBC /* main3.cpp in Sources */,
+				7D8290A813B0C2540018FBBC /* saveimage.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7D6E42230FD6BC01000344D4 /* 開発 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "開発";
+		};
+		7D6E42240FD6BC01000344D4 /* 運用 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = "運用";
+		};
+		7D6E42250FD6BC01000344D4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+		7D82907113B0B7AF0018FBBC /* 開発 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Info-texture23_____________.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = texture23;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = "開発";
+		};
+		7D82907213B0B7AF0018FBBC /* 運用 */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Info-texture23_____________.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = texture23;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = "運用";
+		};
+		7D82907313B0B7AF0018FBBC /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Info-texture23_____________.plist";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = texture23;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D6E42290FD6BC01000344D4 /* Build configuration list for PBXProject "texture23" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D6E42230FD6BC01000344D4 /* 開発 */,
+				7D6E42240FD6BC01000344D4 /* 運用 */,
+				7D6E42250FD6BC01000344D4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		7D82907013B0B7AF0018FBBC /* Build configuration list for PBXNativeTarget "texture23" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D82907113B0B7AF0018FBBC /* 開発 */,
+				7D82907213B0B7AF0018FBBC /* 運用 */,
+				7D82907313B0B7AF0018FBBC /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DD5724808E7C00E00443698 /* Project object */;
+}
