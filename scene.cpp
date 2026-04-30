@@ -1,1 +1,128 @@
-#include <stdio.h>#include <math.h>#if defined(WIN32)#  include "glut.h"#elif defined(__APPLE__) || defined(MACOSX)#  include <GLUT/glut.h>#else#  include <GL/glut.h>#endif#include "scene.h"#define PI 3.1415926535897932384626433832795 /* ‰~ü—¦@@@ *//*** ƒ^ƒCƒ‹‚Ì•`‰æ*/static void tile(double w, double d, int nw, int nd){  /* ƒ^ƒCƒ‹‚ÌF */  static const GLfloat color[][4] = {    { 0.6, 0.6, 0.6, 1.0 },    { 0.3, 0.3, 0.3, 1.0 }  };    int i, j;  glNormal3d(0.0, 1.0, 0.0);  glBegin(GL_QUADS);  for (j = 0; j < nd; ++j) {    GLdouble dj = d * j, djd = dj + d;    for (i = 0; i < nw; ++i) {      GLdouble wi = w * i, wiw = wi + w;      glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color[(i + j) & 1]);      glVertex3d(wi,  0.0, dj);      glVertex3d(wi,  0.0, djd);      glVertex3d(wiw, 0.0, djd);      glVertex3d(wiw, 0.0, dj);    }  }  glEnd();}/*** ” ‚Ì•`‰æ*/static void box(double x, double y, double z){  /* ’¸“_ƒf[ƒ^ */  const GLdouble vertex[][3] = {    { 0.0, 0.0, 0.0 },    {   x, 0.0, 0.0 },    {   x,   y, 0.0 },    { 0.0,   y, 0.0 },    { 0.0, 0.0,   z },    {   x, 0.0,   z },    {   x,   y,   z },    { 0.0,   y,   z },  };    /* –Êƒf[ƒ^ */  static const int face[][4] = {    { 0, 1, 2, 3 },    { 1, 5, 6, 2 },    { 5, 4, 7, 6 },    { 4, 0, 3, 7 },    { 4, 5, 1, 0 },    { 3, 2, 6, 7 },  };    /* –Ê‚Ì–@üƒxƒNƒgƒ‹ */  static const GLdouble normal[][3] = {    { 0.0, 0.0,-1.0 },    { 1.0, 0.0, 0.0 },    { 0.0, 0.0, 1.0 },    {-1.0, 0.0, 0.0 },    { 0.0,-1.0, 0.0 },    { 0.0, 1.0, 0.0 },  };    /* ” ‚ÌF */  static const GLfloat color[] = { 0.8, 0.8, 0.2, 1.0 };    int i, j;    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);  glBegin(GL_QUADS);  for (j = 0; j < 6; j++) {    glNormal3dv(normal[j]);    for (i = 4; --i >= 0;) {      glVertex3dv(vertex[face[j][i]]);    }  }  glEnd();}/*** ƒV[ƒ“‚Ì•`‰æ*/void scene(double t){  static const GLfloat red[] = { 0.8, 0.2, 0.2, 1.0 };  static const double r = 1.5;  double wt = 2.0 * PI * t;  /* ƒ^ƒCƒ‹‚ğ•`‚­ */  glPushMatrix();  glTranslated(-3.0, -2.0, -3.0);  tile(1.0, 1.0, 6, 6);  glPopMatrix();    /* ” ‚ğ•`‚­ */  glPushMatrix();  glTranslated(-1.0, -1.5, -1.0);  box(2.0, 1.0, 2.0);  glPopMatrix();    /* ‹…‚ğ•`‚­ */  glPushMatrix();  glTranslated(r * cos(wt), 1.0, r * sin(wt));  glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, red);  glutSolidSphere(0.9, 32, 16);  glPopMatrix();}
+ï»¿#include <stdio.h>
+#include <math.h>
+
+#if defined(WIN32)
+#  include "glut.h"
+#elif defined(__APPLE__) || defined(MACOSX)
+#  include <GLUT/glut.h>
+#else
+#  include <GL/glut.h>
+#endif
+
+#include "scene.h"
+
+#define PI 3.1415926535897932384626433832795 /* å††å‘¨ç‡ã€€ã€€ã€€ */
+
+/*
+** ã‚¿ã‚¤ãƒ«ã®æç”»
+*/
+static void tile(double w, double d, int nw, int nd)
+{
+  /* ã‚¿ã‚¤ãƒ«ã®è‰² */
+  static const GLfloat color[][4] = {
+    { 0.6, 0.6, 0.6, 1.0 },
+    { 0.3, 0.3, 0.3, 1.0 }
+  };
+  
+  int i, j;
+
+  glNormal3d(0.0, 1.0, 0.0);
+  glBegin(GL_QUADS);
+  for (j = 0; j < nd; ++j) {
+    GLdouble dj = d * j, djd = dj + d;
+
+    for (i = 0; i < nw; ++i) {
+      GLdouble wi = w * i, wiw = wi + w;
+
+      glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color[(i + j) & 1]);
+      glVertex3d(wi,  0.0, dj);
+      glVertex3d(wi,  0.0, djd);
+      glVertex3d(wiw, 0.0, djd);
+      glVertex3d(wiw, 0.0, dj);
+    }
+  }
+  glEnd();
+}
+
+/*
+** ç®±ã®æç”»
+*/
+static void box(double x, double y, double z)
+{
+  /* é ‚ç‚¹ãƒ‡ãƒ¼ã‚¿ */
+  const GLdouble vertex[][3] = {
+    { 0.0, 0.0, 0.0 },
+    {   x, 0.0, 0.0 },
+    {   x,   y, 0.0 },
+    { 0.0,   y, 0.0 },
+    { 0.0, 0.0,   z },
+    {   x, 0.0,   z },
+    {   x,   y,   z },
+    { 0.0,   y,   z },
+  };
+  
+  /* é¢ãƒ‡ãƒ¼ã‚¿ */
+  static const int face[][4] = {
+    { 0, 1, 2, 3 },
+    { 1, 5, 6, 2 },
+    { 5, 4, 7, 6 },
+    { 4, 0, 3, 7 },
+    { 4, 5, 1, 0 },
+    { 3, 2, 6, 7 },
+  };
+  
+  /* é¢ã®æ³•ç·šãƒ™ã‚¯ãƒˆãƒ« */
+  static const GLdouble normal[][3] = {
+    { 0.0, 0.0,-1.0 },
+    { 1.0, 0.0, 0.0 },
+    { 0.0, 0.0, 1.0 },
+    {-1.0, 0.0, 0.0 },
+    { 0.0,-1.0, 0.0 },
+    { 0.0, 1.0, 0.0 },
+  };
+  
+  /* ç®±ã®è‰² */
+  static const GLfloat color[] = { 0.8, 0.8, 0.2, 1.0 };
+  
+  int i, j;
+  
+  glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, color);
+  glBegin(GL_QUADS);
+  for (j = 0; j < 6; j++) {
+    glNormal3dv(normal[j]);
+    for (i = 4; --i >= 0;) {
+
+      glVertex3dv(vertex[face[j][i]]);
+    }
+  }
+  glEnd();
+}
+
+/*
+** ã‚·ãƒ¼ãƒ³ã®æç”»
+*/
+void scene(double t)
+{
+  static const GLfloat red[] = { 0.8, 0.2, 0.2, 1.0 };
+  static const double r = 1.5;
+  double wt = 2.0 * PI * t;
+
+  /* ã‚¿ã‚¤ãƒ«ã‚’æã */
+  glPushMatrix();
+  glTranslated(-3.0, -2.0, -3.0);
+  tile(1.0, 1.0, 6, 6);
+  glPopMatrix();
+  
+  /* ç®±ã‚’æã */
+  glPushMatrix();
+  glTranslated(-1.0, -1.5, -1.0);
+  box(2.0, 1.0, 2.0);
+  glPopMatrix();
+  
+  /* çƒã‚’æã */
+  glPushMatrix();
+  glTranslated(r * cos(wt), 1.0, r * sin(wt));
+  glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, red);
+  glutSolidSphere(0.9, 32, 16);
+  glPopMatrix();
+}
