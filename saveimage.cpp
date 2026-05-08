@@ -17,7 +17,7 @@
 /*
 ** ウィンドウの内容を BMP 形式で保存
 */
-int saveimage(void)
+int saveimage()
 {
   /* BMP/DIB ファイルのヘッダ定義 */
   struct biHeader {
